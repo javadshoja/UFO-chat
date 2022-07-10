@@ -1,0 +1,107 @@
+.wrapper {
+  max-height: 500px;
+  min-width: 700px;
+  height: 100vh;
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+.messageList {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.messageList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.messageBox {
+  display: flex;
+  width: 100%;
+  background-color: rgba(256, 256, 256, 0.8);
+  padding: 1rem;
+}
+
+.messageBox textarea {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+.messageBox button {
+  margin-left: 0.5rem;
+  background-color: blueviolet;
+  font-size: 1.25rem;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  backdrop-filter: blur(1px) saturate(180%);
+  -webkit-backdrop-filter: blur(1px) saturate(180%);
+  background-color: rgba(244, 244, 244, 0.4);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  font-size: 1.25rem;
+}
+
+.messageInner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.messageSender {
+  color: #333;
+  font-size: 0.75rem;
+}
+
+.messageBody {
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 70em) {
+  .wrapper {
+    max-height: 400px;
+    min-width: 550px;
+  }
+}
+@media screen and (max-width: 40em) {
+  .message {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+    font-size: 1rem;
+  }
+  .messageBox textarea {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .messageBox button {
+    font-size: 0.75rem;
+  }
+
+  .wrapper {
+    max-height: 400px;
+    min-width: 380px;
+  }
+}
+@media screen and (max-width: 30em) {
+  .messageBox {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .wrapper {
+    max-height: 300px;
+    min-with: 100%;
+  }
+}
+@media screen and (max-width: 20em) {
+  .wrapper {
+    max-height: 300px;
+    min-width: 100%;
+  }
+}
